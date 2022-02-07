@@ -1,0 +1,14 @@
+extends base.pug
+include mixins/video.pug
+
+block homeUpload
+    nav
+        ul
+            li
+                a(href="/videos/upload") Upload Video
+            li
+                a(href="/search") Search
+
+block content
+    each potato in videos
+        +video(potato)

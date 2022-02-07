@@ -1,0 +1,20 @@
+extends base.pug
+
+block homeUpload
+    nav
+        ul
+            li
+                a(href="/videos/upload") Upload Video
+            li
+                a(href="/") Home
+            li
+                a(href="/search") Search
+
+block content
+    div
+        p=video.description
+        p=video.hashtags
+        small=video.createdAt
+    a(href=`${video.id}/edit`) Edit Video &rarr;
+    br
+    a(href=`${video.id}/delete`) Delete Video &rarr;
